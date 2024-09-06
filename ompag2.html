@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.89);
+        }
+
+        .sign {
+            color: whitesmoke;
+            font-size: 44px;
+            text-align: center;
+            font-family: fantasy;
+            background-color: rgb(245, 37, 37);
+            margin: 23px 464px;
+            padding: 9px 17px;
+            border-radius: 30px;
+            border: 5px solid black;
+        }
+
+        .frm {
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 33px;
+        }
+
+        .frm input::placeholder {
+            font-size: 22px; /* Increased placeholder text size */
+        }
+
+        .frm input {
+            font-size: 22px; /* Increased text size inside input fields */
+        }
+
+        #agree {
+            font-size: 39px;
+            border: 3px solid grey;
+            border-radius: 26px;
+            height: 40px;
+        }
+
+        #body {
+            border: 5px solid grey;
+            margin: auto;
+            border-radius: 27px;
+            padding: 4px;
+            margin: 33px;
+            height: 973px;
+        }
+
+        .bt {
+            border-radius: 25px;
+            font-size: 33px; /* Increased button font size */
+            padding: 15px 30px; /* Increased button size */
+            border: 3px solid white;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sp {
+            color: white;
+            font-weight: bold;
+            text-align: right;
+            font-size: 22px;
+        }
+
+        .age {
+            width: 33px;
+        }
+
+        .pass {
+            width: 136px;
+        }
+
+        /* Increased dropdown and option font sizes */
+        #con {
+            font-size: 24px;
+            padding: 10px;
+            width: 250px; /* Increased width of dropdown */
+            border-radius: 10px;
+            border: 2px solid grey;
+        }
+
+        #con option {
+            font-size: 24px; /* Increased text size inside dropdown */
+        }
+
+        /* Popup styling */
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.969);
+            padding: 40px; /* Increased popup size */
+            width: 400px; /* Increased popup width */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+
+        #popup p {
+            font-size: 24px; /* Increased popup text size */
+            font-weight: bold;
+        }
+
+        #popup button {
+            padding: 15px 40px; /* Increased button size */
+            margin-top: 20px; /* Increased margin */
+            cursor: pointer;
+            font-size: 22px; /* Increased button font size */
+            background-color: rgb(245, 37, 37);
+            color: whitesmoke;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="nr">
+        <div class="sign">Sign in</div><br><br>
+        <form class="frm">
+            Name : <input type="text" placeholder="First Name"><br><br><br>
+            Email : <input type="email" autocomplete="off" required placeholder="abc@gmail.com"><br><br><br>
+            Age : <input type="number" class="age"><br><br><br>
+            Gender : <input type="radio" name="gender"> Male &nbsp;<input type="radio" name="gender"> Female
+            <br><br><br>
+            <label for="con">Select Region: </label>
+            <select name="" id="con">
+                <option value="ind">India</option>
+                <option value="in">North America</option>
+                <option value="i">South America</option>
+                <option value="ru">Russia</option>
+                <option value="ind">Australia</option>
+            </select><br><br><br>
+            Enter Password : <input type="password" autocomplete="off" required class="pass"><br><br><br>
+            Confirm Password : <input type="password" autocomplete="off" required class="pass"><br><br><br>
+            <p id="agree">I agree to the conditions <input type="checkbox"></p><br><br>
+            <button type="button" class="bt" id="createAccount">Create Account</button>
+        </form><br>
+        
+    </div>
+
+    <!-- Popup and overlay -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <p>Account created successfully!</p>
+        <button id="goToLogin">Go to Login</button>
+    </div>
+
+    <script>
+        // Get references to the elements
+        const createAccountButton = document.getElementById('createAccount');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+        const goToLoginButton = document.getElementById('goToLogin');
+
+        // Show popup when "Create Account" is clicked
+        createAccountButton.addEventListener('click', function() {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        // Redirect to login page when "Go to Login" is clicked
+        goToLoginButton.addEventListener('click', function() {
+            window.location.href = 'http://127.0.0.1:5500/login.html'; // Replace 'login.html' with your actual login page URL
+        });
+
+        // Hide the popup and overlay when clicking outside the popup
+        overlay.addEventListener('click', function() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

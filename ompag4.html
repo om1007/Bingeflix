@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont {
+            border: 3px solid gainsboro;
+            background-color: rgba(0, 0, 0, 0.89);
+            border-radius: 23px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .box {
+            border: 3px solid gainsboro;
+            width: 375px;
+            height: 210px;
+            border-radius: 19px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .imga {
+            width: 96%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .caption {
+            color: gainsboro;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px; /* Adjusted font size for readability */
+            margin-top: 5px;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .navb {
+            background-color: rgb(0, 0, 0);
+            overflow: auto;
+            border-radius: 30px;
+            border: 3px solid gainsboro;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .navb ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .navb li {
+            margin: 13px 20px;
+        }
+
+        .navb li a {
+            text-decoration: none;
+            padding: 3px;
+            color: gainsboro;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 28px;
+        }
+
+        .navb li a:hover {
+            color: grey;
+        }
+
+        #search {
+            padding: 5px;
+            margin: 15px;
+            border-radius: 19px;
+            border: 3px solid gainsboro;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 19px;
+        }
+
+        span {
+            color: red;
+            margin: 10px 0; /* Adjusted margin for better spacing */
+            font-family: fantasy;
+            font-size: 50px;
+            text-align: center; /* Center the heading */
+        }
+
+        .movi {
+            color: gainsboro;
+            font-size: 35px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 7px 26px;
+            padding: 2px 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .end {
+            text-align: center;
+            color: aliceblue;
+            font-size: 34px;
+            padding: 97px 11px;
+            margin: 11px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navb">
+            <ul>
+                <li><a href="login.html">Log Out</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <span>Bingeflix</span>
+            <div>
+                <input type="text" id="search" placeholder="Search here">
+            </div>
+        </nav>
+    </header>
+    
+    <div class="cont">
+        <p class="movi">Movies</p>
+        <div class="box-container">
+            <div class="box">
+                <img src="dp.jpg" alt="error" class="imga">
+                <div class="caption">Dynamic Picture</div>
+            </div>
+            <div class="box">
+                <img src="spd.jpg" alt="error" class="imga">
+                <div class="caption">Speed</div>
+            </div>
+            <div class="box">
+                <img src="mii.jpg" alt="error" class="imga">
+                <div class="caption">Mii</div>
+            </div>
+            <div class="box">
+                <img src="trav.jpg" alt="error" class="imga">
+                <div class="caption">Travel</div>
+            </div>
+            <div class="box">
+                <img src="flash.jpg" alt="error" class="imga">
+                <div class="caption">Flash</div>
+            </div>
+            <div class="box">
+                <img src="bt.jpg" alt="error" class="imga">
+                <div class="caption">BT</div>
+            </div>
+        </div>
+        <br><br>
+        <p class="movi">TV Shows</p>
+        <div class="box-container">
+            <div class="box">
+                <img src="str.jpg" alt="error" class="imga">
+                <div class="caption">Stranger Things</div>
+            </div>
+            <div class="box">
+                <img src="moon.jpg" alt="error" class="imga">
+                <div class="caption">Moon</div>
+            </div>
+            <div class="box">
+                <img src="lou.jpg" alt="error" class="imga">
+                <div class="caption">Lou</div>
+            </div>
+            <div class="box">
+                <img src="pun.jpg" alt="error" class="imga">
+                <div class="caption">Pun</div>
+            </div>
+            <div class="box">
+                <img src="sec.jpg" alt="error" class="imga">
+                <div class="caption">Sec</div>
+            </div>
+            <div class="box">
+                <img src="dar.jpg" alt="error" class="imga">
+                <div class="caption">Dark</div>
+            </div>
+        </div>
+        <br><br>
+        <p class="movi">Documentaries</p>
+        <div class="box-container">
+            <div class="box">
+                <img src="hc.jpg" alt="error" class="imga">
+                <div class="caption">HC</div>
+            </div>
+            <div class="box">
+                <img src="mone.jpg" alt="error" class="imga">
+                <div class="caption">Money</div>
+            </div>
+            <div class="box">
+                <img src="arn.jpg" alt="error" class="imga">
+                <div class="caption">Arn</div>
+            </div>
+            <div class="box">
+                <img src="cryp.jpg" alt="error" class="imga">
+                <div class="caption">Cryp</div>
+            </div>
+            <div class="box">
+                <img src="one.jpg" alt="error" class="imga">
+                <div class="caption">One</div>
+            </div>
+            <div class="box">
+                <img src="kk.jpg" alt="error" class="imga">
+                <div class="caption">KK</div>
+            </div>
+        </div>
+
+        <p class="end">&copy; Bingeflix since 2006</p>
+    </div>
+</body>
+</html>
