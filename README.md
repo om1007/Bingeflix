@@ -1,8 +1,11 @@
 # Bingeflix
 
-▪ Developed a web application using HTML, CSS, and JavaScript with a sleek design. GitHub
+▪ Developed a OTT platform with a sleek design .
+
 ▪ Enabled users to browse and view movies, shows, and documentaries.
+
 ▪ Focused on creating a user-friendly interface with smooth navigation.
+
 ▪ Emphasized delivering an engaging user experience.
 
 Output : 
